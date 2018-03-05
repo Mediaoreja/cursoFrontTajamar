@@ -1,9 +1,14 @@
+/* para importar otras hojas de estilo */
+ @import "extras.css"; 
+
+/* esto es un comentario, con alt+shift+A y seleccionado el texto se convierte en un comentario automáticamente */
+
 /* Formula de especificidad en la aplicación de los estilos:
 
-a - valosres en linea in line
-b - valores por id
-c - Valores por la class
-d - Valores por etiqueta
+a - valores en linea in line
+b - valores para id
+c - Valores para la class o otrosa atributos
+d - Valores para etiqueta o elemento
  
 a.b.c.d
 
@@ -19,8 +24,7 @@ Especificidad : 0.1.0.0
 Selector por clase 
 Especificidad : 0.0.1.0
 */
-.p1 {color: blueviolet}
-.p2 {color: cyan}
+.p2 {color: blueviolet}
 
 /*
 Selector por etiqueta
@@ -28,3 +32,9 @@ Especificidad : 0.0.0.1
 */
 p {color: brown}
 
+/* Dos elementos con la misma especificidad se aplicará la última regla */
+
+/* Selector combinado
+Especificidad : 0.0.1.1 */
+
+p.p2 {color: chartreuse}

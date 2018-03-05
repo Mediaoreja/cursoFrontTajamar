@@ -1,0 +1,62 @@
+footer p {
+    color:crimson;
+}
+
+article p {
+    color:blue;
+}
+
+/* selector de atributo en css3 */
+[name="lorem"] {
+    color:mediumpurple;
+}
+
+/* La siguiente instrucción sería para las clases pero ya hay una de css anterior .p1 
+[class="p1"] {
+    color:pink;
+}
+*/
+
+/* pseudoclases */
+
+article .p2:hover{
+    color:orangered;
+}
+
+footer a:link{
+    color:green;
+}
+
+footer a:hover{
+    color:black;
+}
+
+footer a:visited{
+    color:red;
+}
+
+footer:hover p.derechos{
+    font-size:2rem;
+}
+
+p[name="lorem"]::first-letter{
+    font-size: 3rem;
+}
+
+p[name^="nob"]::first-line{
+    font-weight: bold;
+}
+
+section {
+    counter-reset: section;
+}
+
+section p::before{
+    counter-increment: section;
+    content: counter(section);
+    
+}
+
+section p::after{
+    content: url(../img/favicon_italia.png);
+}
