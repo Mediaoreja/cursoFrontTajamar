@@ -1,0 +1,30 @@
+/* Formula de especificidad en la aplicación de los estilos:
+
+a - valosres en linea in line
+b - valores por id
+c - Valores por la class
+d - Valores por etiqueta
+ 
+a.b.c.d
+
+*/
+
+/* 
+Selector por ID
+Especificidad : 0.1.0.0
+*/
+#p1 {color: blue}
+
+/*
+Selector por clase 
+Especificidad : 0.0.1.0
+*/
+.p1 {color: blueviolet}
+.p2 {color: cyan}
+
+/*
+Selector por etiqueta
+Especificidad : 0.0.0.1
+*/
+p {color: brown}
+
