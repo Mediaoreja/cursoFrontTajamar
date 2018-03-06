@@ -1,3 +1,7 @@
+/* Para importar fuentes desde google fonts en la hoja de estilo. con esto no se necesita tener un link en el html. Los @import siempre van al principio de la hoja de estilos */
+
+@import url('https://fonts.googleapis.com/css?family=Lobster|Mina:400,700');
+
 /* simpre comenzar nuestro css con la siguiente regla.
 si no la escribimos en nuestro css estará incorporada al principìo de la hoja de reseteo.
 Siempre podemos crearnos nuestra propia hoja de estilo de reseteo
@@ -11,15 +15,33 @@ Siempre podemos crearnos nuestra propia hoja de estilo de reseteo
     box-sizing: border-box;
 }
 
-
-
-
-header p {
-    color: maroon;
-    font-size: 1.5rem;
-    font-weight: bold;
+body {
+    font-family: 'Mina', sans-serif; 
 }
 
-footer p {
+header h1 {
+    color: maroon;
+    font-size: 4rem;
+    font-family: 'Lobster', cursive;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+header h2 {
+    color:gray;
+    font-family: 'Lobster', cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+footer {
     color: navy;
 }
