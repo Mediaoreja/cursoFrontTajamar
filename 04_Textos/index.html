@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Textos</title>
+    <style>
+        blockquote::before {
+            content: open-quote;
+            font-size: 4rem;
+        }
+        blockquote::after {
+            content: close-quote;
+            font-size: 4rem;
+        }
+        
+        q {
+            quotes: '\00AB' '\00BB'
+        }
+    </style>
+
+</head>
+<body>
+    <nav>
+            <!-- Etiquetas de menu en desuso porque no lo soportan muchos navegadores actuales, actualmente se incluye una lista en un nav. De usarse mejor sin atributo la etiqueta menu, porque lo soportan los navegadores-->
+        <menu type="context">
+            <menuitem>Item1</menuitem>
+            <menuitem>Item2</menuitem>
+            <menuitem>Item3</menuitem>
+            <menuitem>Item4</menuitem>
+            <menuitem>Item5</menuitem>
+        </menu>
+        <menu>
+            <menuitem>Item1</menuitem>
+            <menuitem>Item2</menuitem>
+            <menuitem>Item3</menuitem>
+            <menuitem>Item4</menuitem>
+            <menuitem>Item5</menuitem>
+        </menu>
+        <menu type="toolbar">
+            <menuitem>Item_tolbar 1</menuitem>
+            <menuitem>Item_tolbar 2</menuitem>
+            <menuitem>Item_tolbar 3</menuitem>
+            <menuitem>Item_tolbar 4</menuitem>
+            <menuitem>Item_tolbar 5</menuitem>
+        </menu>
+    </nav>
+
+    <!-- desplagable -->
+   <details>
+       <summary>
+           Introducción
+       </summary>
+       
+        <p>La historia de la provincia de Zamora es una parte de la historia de España que se localiza en el área geográfica aproximada de la actual provincia de Zamora. Hubo historiadores y estudiosos relevantes de la historia de la provincia, algunos de ellos fueron el fraile medieval Juan Gil de Zamora, y uno de los más renombrados que del siglo XVI: Florián de Ocampo (que en la actualidad posee un Instituto de Estudios Zamoranos homónimo), y los historiadores de la provincia: Cesáreo Fernández Duro, Antonio Piñuela Ximénez y Ursicinio Álvarez.19​ Todos ellos fueron estudiosos especializados que pusieron la semilla de los historiadores que posteriormente aparecieron en el siglo XX. En 1989 se celebra el Primer Congreso de Historia de Zamora con ediciones posteriores. La provincia ha tenido desde sus inicios tres ciudades históricamente importantes: Zamora, Toro, Benavente. En torno a ellas existen otros núcleos poblacionales con protagonismo y presencia en diferentes instantes de su historia.</p>
+   </details>
+        <p>
+            <samp>Esto es texto sample. Elemento en línea</samp> 
+        </p>
+        <p>
+           <code>Esto es texto código. Elemento en línea</code> 
+        </p>
+        
+
+        
+
+        <blockquote cite="http://bibliotecadigital.tamaulipas.gob.mx/archivos/descargas/cdace7df6d82df4351c3cb8a1fa76fc9e654927b.pdf" title="Fuente: El Hobbit">
+            <h3>Una tertulia inesperada</h3>
+            <p>En un agujero en el suelo, vivía un hobbit. No un agujero húmedo, sucio,
+                repugnante, con restos de gusanos y olor a fango, ni tampoco un agujero seco,
+                desnudo y arenoso, sin nada en que sentarse o que comer: era un agujero-hobbit,
+                y eso significa comodidad.</p>
+            <p>Tenía una puerta redonda, perfecta como un ojo de buey, pintada de verde, con
+                una manilla de bronce dorada y brillante, justo en el medio. La puerta se abría a un
+                vestíbulo cilíndrico, como un túnel: un túnel muy cómodo, sin humos, con paredes
+                revestidas de madera y suelos enlosados y alfombrados, provisto de sillas
+                barnizadas, y montones y montones de perchas para sombreros y abrigos; el
+                hobbit era aficionado a las visitas. El túnel se extendía serpeando, y penetraba
+                bastante, pero no directamente, en la ladera de la colina —La Colina, como la
+                llamaba toda la gente de muchas millas alrededor—, y muchas puertecitas
+                redondas se abrían en él, primero a un lado y luego al otro. Nada de subir
+                escaleras para el hobbit: dormitorios, cuartos de baño, bodegas, despensas
+                (muchas), armarios (habitaciones enteras dedicadas a ropa), cocinas. Comedores,
+                se encontraban en la misma planta, y en verdad en el mismo pasillo. Las mejores
+                habitaciones estaban todas a la izquierda de la puerta principal, pues eran las
+                únicas que tenían ventanas, ventanas redondas, profundamente excavadas, que
+                miraban al jardín y los prados de más allá, camino del río (...).</p>
+                <cite>
+                    El Hobbit, J. R. R. Tolkien.
+                </cite>
+        </blockquote>
+            
+        <p>Parte de la historia de la provincia de Zamora: <q cite="fuente de la cita">se encuentra narrada...</q> en forma de cantares como el Cantar de Sancho II y los de Gesta en su lucha con los reinos musulmanes del Al-Ándalus.</p>
+
+        <p>Para escribir código:</p>
+        <pre>
+            <code>
+                var a = 25;
+                for (i=0;i&gt;a;i++) {
+                    x=12;
+                    y=21;
+                }
+            </code>
+        </pre>
+        
+</body>
+</html>
