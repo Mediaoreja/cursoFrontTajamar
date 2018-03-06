@@ -1,0 +1,38 @@
+/* article p {
+    color:brown
+}
+
+article p:nth-child(2) {
+    color:green
+}
+
+p:nth-of-type(2) {
+    color:blue;
+}
+
+p:last-child {
+    color: pink;
+} 
+
+
+
+
+*/
+
+
+
+
+
+:root {
+    --color-base :darkblue;
+    --color-texto : maroon;
+
+}
+
+* {
+    color: var(--color-base);
+}
+p:not(:first-of-type){
+    color: var(--color-texto);
+    border:1px solid;
+}
