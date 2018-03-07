@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Static</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 90%;
+        min-width: 488px;
+        margin: 0 auto;
+        border: .1rem solid lightgray;
+        
+    }
+
+    
+    p {
+        background-color: lightsalmon;
+        
+        width: 20%;
+        padding: 1.5rem;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    p:not(:first-of-type) {
+        margin-left: -4px;
+    
+    }
+
+    p:not(:last-of-type) {
+        margin-right: 6.66%;
+    }
+
+    /* para hacer menús desplegables con css */
+    p:nth-of-type(2) {
+        display:none;
+    }
+
+    .container:hover p:nth-of-type(2) {
+        display:inline-block;
+    }
+    
+
+</style>
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, minima maiores deleniti nulla quisquam commodi rem sint earum hic. Amet dolorum earum repudiandae sint quam aliquam error laboriosam labore est!</p>
+        <p>Animi quibusdam ab modi recusandae. Necessitatibus, minima maiores deleniti nulla quisquam commodi rem sint earum hic. Amet dolorum earum repudiandae sint quam aliquam error laboriosam labore est! Nobis quisquam, sequi tempore architecto quibusdam pariatur maxime ut minus velit quam explicabo neque, aut perspiciatis id quia facere ipsum. Dolorum reprehenderit temporibus voluptas illo.</p>
+        <p>Eum debitis assumenda velit iusto omnis eaque distinctio impedit repellendus consequuntur, animi quibusdam harum, non laudantium veritatis! Minima numquam itaque, odio cumque laborum error perspiciatis harum consequatur ut laboriosam eius.</p>
+        <p>Commodi dolor, eaque vel reprehenderit exercitationem minima porro eveniet deleniti provident enim, sapiente voluptate beatae et? Id eius alias laborum molestias, nihil numquam ipsum molestiae consequuntur, cumque obcaecati, facere aliquid?</p>
+    </div>
+    
+    
+</body>
+</html>
