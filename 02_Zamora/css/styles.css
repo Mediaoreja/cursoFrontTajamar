@@ -8,15 +8,27 @@ Siempre podemos crearnos nuestra propia hoja de estilo de reseteo
 */
 
 *, 
-*::after, 
-*::before,
-*:after,
-*:before{
+*::after, *::before,
+*:after, *:before{
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Mina', sans-serif; 
+    font-family: 'Mina', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    max-width: 1080px;
+    min-width: 680px;
+    box-shadow: 0 0 1rem .2rem lightgray;
+    padding: 3rem 2rem;
 }
 
 header h1 {
@@ -37,11 +49,28 @@ header h2 {
     margin-bottom: 3rem;
 }
 
+.portada {
+    overflow: hidden;
+}
+
 h2 {
+    color: maroon;
     font-size: 2rem;
     margin-top: 3rem;
     margin-bottom: 1rem;
 }
+
+h3 {
+    color:gray;
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-type: circle;
+}
+
 footer {
     color: navy;
 }
