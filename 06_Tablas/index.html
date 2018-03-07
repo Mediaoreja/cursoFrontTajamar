@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tablas</title>
+
+    <style>
+    table.t1,
+    table.t2 {
+        empty-cells: hide;
+        /* para colapsar los bordes de las celdas */
+        border-collapse: collapse;
+    }
+
+   /*  table.t1:hover {
+        border-collapse: separate;
+        border-spacing: 1rem;
+    } */
+
+    table.t1 th {
+         padding: 1rem 2rem;
+         border: .2rem solid;
+        
+     }
+
+    table.t1 td {
+         text-align: right;
+         padding: .5rem 1rem;
+         border: .2rem dotted;
+     }
+
+    table.t2 th, 
+    table.t2 td{
+        border: .1rem solid;
+        padding: .3rem 1rem;
+    }
+
+/*-- colorea las celdas td par o impar--*/
+    table.t2 td:nth-of-type(odd){
+        background-color: lightcoral;
+    }
+    table.t2 td:nth-of-type(even){
+        background-color: lightseagreen;
+    }
+    </style>
+</head>
+<body>
+    <h1>Tablas en HTML</h1>
+    <table class="t1">
+        <tr>
+            <th></th>
+            <th >Examen 1</th>
+            <th >Examen 2</th>
+            <th >Examen 3</th>
+
+        </tr>
+        <tr>
+            <th>Alumno 1</th>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <th>Alumno 2</th>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+         </tr>
+         <tr>
+            <th>Alumno 3</th>
+            <td>7</td>
+            <td>9</td>
+            <td></td>
+         </tr>
+ 
+    </table>
+    <hr>
+    <table class="t2">
+        <!-- scope indica el ámbito de acción del th, recomendable para la usabilidad -->
+            <tr>
+                <th colspan="2">Notas front</th>
+                <th scope="col">Examen 1</th>
+                <th scope="col">Examen 2</th>
+                <th scope="col">Examen 3</th>
+    
+            </tr>
+            <tr>
+                <th rowspan="2" scope="rowgroup">Alumno 1</th>
+                <th scope="row">Teoría</th>
+                <td>5</td>
+                <td>70</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <th scope="row">Práctica</th>
+                <td>0</td>
+                <td>0</td>
+                <td>8</td>
+             </tr>
+             <th rowspan="2" scope="rowgroup">Alumno 2</th>
+             <th scope="row">Teoría</th>
+             <td>5</td>
+             <td>70</td>
+             <td>8</td>
+         </tr>
+         <tr>
+             <th scope="row">Práctica</th>
+             <td>0</td>
+             <td>0</td>
+             <td>8</td>
+          </tr>
+          <th rowspan="2" scope="rowgroup">Alumno 3</th>
+          <th scope="row">Teoría</th>
+          <td>5</td>
+          <td>70</td>
+          <td>8</td>
+      </tr>
+      <tr>
+          
+          <th scope="row">Práctica</th>
+          <td>0</td>
+          <td>0</td>
+          <td>8</td>
+       </tr>
+     
+        </table>
+   
+</body>
+</html>
