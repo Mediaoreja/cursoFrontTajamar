@@ -71,6 +71,19 @@ ul {
     list-style-type: circle;
 }
 
+table {
+    border-collapse: collapse;
+}
+
+table th{
+    border: .2rem solid lightseagreen;
+    padding: .1rem 1rem;
+}
+table td{
+    border: .2rem dotted lightseagreen;
+    padding: .1rem 1rem;
+}
+
 footer {
     color: navy;
 }
