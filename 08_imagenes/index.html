@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Imágenes</title>
+
+<style>
+    /* Las imágenes es el único elemento que no es bloque ni línea, son elementos inline-block */
+   /*  img {
+        width: 300px;
+        margin: 2rem;
+    } */
+
+    div {
+        border:1px solid;
+    }
+
+    /* para corregir el espacio debajo de la img en un div, al estar alineada a la linea base
+    podemos usar la siguiente regla */
+
+    div:nth-of-type(2) img {
+        vertical-align: top;
+    }
+
+
+    /* con esta siguiente regla se corrige el espacio que deja lateral entre imagen e imagen */
+    div:nth-of-type(2) img:not(:first-of-type) {
+        margin-left: -4px;
+    }
+
+</style>
+
+</head>
+<body>
+    <h1>Imágenes en la web</h1>
+    <!-- si metemos un img dentro de un div se comporta como un bloque -->
+    <div>
+        <img src="http://via.placeholder.com/350x250"><img src="http://via.placeholder.com/350x250">
+    </div>
+    <div>
+        <img src="http://via.placeholder.com/350x250"><img src="http://via.placeholder.com/350x250">
+    </div>
+    <div>
+        <img src="http://via.placeholder.com/350x250">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolor veniam et doloribus! Soluta ipsa impedit distinctio, quaerat maxime ut! Error assumenda eum reiciendis hic accusantium, magnam animi sed provident!</p>
+    
+    
+</body>
+</html>

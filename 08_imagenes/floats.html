@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+
+
+        /* por defecto el navegador da unos valores por defecto a la etiqueta figure. Es conveniente resetear estos valores si queremos poder modificarlos */
+        figure {
+            float: left;
+            border: 3px solid rgb(140, 191, 233);
+            margin: 0 1rem .5rem 0;
+            padding: 0;
+            width: 50%;
+            max-width: 600px; /* tamaño de la imagen que contenga */
+        }
+        /* para hacer el tamaño de la img responsive cuando se amplie o reduzca el tamaño de su padre contenedor, se le pone width 100% */
+        figure img {
+            width: 100%;
+        }
+
+        figcaption {
+            padding: .5rem;
+        }
+
+        p:nth-of-type(4) {
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <figure>
+        <!-- Solo es permitido no incluir el atributo alt si el figcaption del elemento figure es lo suficientemente descriptivo -->
+        <img src="http://lorempixel.com/600/450/cats/" alt="">
+         <figcaption>Foto de un gato</figcaption>
+
+    </figure>      
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel molestiae quo dicta vitae corrupti earum in culpa sunt architecto sint nostrum dolorum error unde aspernatur suscipit excepturi, magnam repudiandae tempore.</p>
+        <p>Modi, deleniti a nobis aut fugit quo saepe, voluptatum sapiente, molestiae laboriosam hic alias. Facilis ad, laborum consequuntur soluta voluptas beatae nemo tempora delectus magni asperiores, hic obcaecati consequatur perferendis!</p>
+        <p>Odit est facilis assumenda nisi enim reprehenderit ipsa, ad unde eum minus quidem molestiae doloribus commodi tempora vitae itaque ea vel. Blanditiis aliquam cumque porro nisi illo quidem culpa eum.</p>
+        <p>Consequuntur odit, nostrum eligendi exercitationem veniam sed quia modi voluptatem, eum numquam cumque ducimus. Tempore deleniti cupiditate consequatur vitae autem libero laborum, perferendis, officiis neque voluptas dignissimos modi maxime? Libero.</p>
+        <p>Dolore, praesentium consectetur tenetur cum ipsam tempora amet, modi adipisci deleniti officiis quo repellendus eum! In ipsum nostrum repellat quis qui, ex quia quod dolorum dignissimos ea assumenda perferendis eligendi!</p>
+        <p>Eos odio recusandae, laudantium minima velit tempore ullam cum laboriosam vitae hic neque, aperiam dolores quia quasi modi suscipit reprehenderit amet adipisci! Quo dolorum qui sunt tempora aperiam earum minima.</p>
+        
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Posición</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        /* con esta regla le decimos que el body mida de altura el 100% del viewport (la pantalla) */
+        body {
+            height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            margin: 5%;
+            height: 90%;
+            border: 1px solid;
+            position: relative; /* posicionamos "relativa" para que tomen de referencia las cajas hijas en su posicionamientos absoluto */
+        }
+
+        .caja {
+            position: absolute; /* dicha posición absoluta toma de referencia el primer elemento ascendente con posición relativa */
+            width: 80px;
+            height: 80px;
+            border: 1px solid;
+        }
+
+        .caja1 {
+            top: 50px;
+            left: 50px;
+            background-color: rgba(0,0,153,.5);
+        }
+
+        .caja2 {
+            top:90px;
+            left:90px;
+            background-color: rgba(153,51,51,.5);
+        }
+
+        /* .caja2:hover {
+            background-color: rgba(153,51,51,0);
+        } */
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class=" caja caja1"></div>
+        <div class=" caja caja2"></div>
+
+
+
+    </div>
+    
+</body>
+</html>
