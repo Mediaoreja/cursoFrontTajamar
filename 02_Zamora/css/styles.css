@@ -1,6 +1,7 @@
 /* Para importar fuentes desde google fonts en la hoja de estilo. con esto no se necesita tener un link en el html. Los @import siempre van al principio de la hoja de estilos */
 
-@import url('https://fonts.googleapis.com/css?family=Lobster|Mina:400,700');
+@import url('https://fonts.googleapis.com/css?family=Mina:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
 
 /* simpre comenzar nuestro css con la siguiente regla.
 si no la escribimos en nuestro css estará incorporada al principìo de la hoja de reseteo.
@@ -13,21 +14,20 @@ Siempre podemos crearnos nuestra propia hoja de estilo de reseteo
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Mina', sans-serif;
-    padding: 0;
+body, figure {
     margin: 0;
+    padding: 0;
+    font-family: 'Mina', sans-serif;
 }
 
+
+
 .container {
+    background: white;
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 2rem;
+    margin: 0 auto;
     max-width: 1080px;
     min-width: 680px;
-    box-shadow: 0 0 1rem .2rem lightgray;
     padding: 3rem 2rem;
 }
 
@@ -38,15 +38,17 @@ header h1 {
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
+    text-align: center;
 }
 
 header h2 {
     color:gray;
     font-family: 'Lobster', cursive;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 3rem;
+    text-align: center;
 }
 
 .portada {
@@ -71,17 +73,59 @@ ul {
     list-style-type: circle;
 }
 
-table {
-    border-collapse: collapse;
+
+
+.datos {
+    font-family: 'Mina', sans-serif;
+    padding: 0;
+    margin: 0;
+    background: rgba(225,243,247,0.38);
+    background: -moz-linear-gradient(top, rgba(225,243,247,0.38) 0%, rgba(225,243,247,1) 15%, rgba(225,243,247,1) 33%, rgba(221,230,168,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(225,243,247,0.38)), color-stop(15%, rgba(225,243,247,1)), color-stop(33%, rgba(225,243,247,1)), color-stop(100%, rgba(221,230,168,1)));
+    background: -webkit-linear-gradient(top, rgba(225,243,247,0.38) 0%, rgba(225,243,247,1) 15%, rgba(225,243,247,1) 33%, rgba(221,230,168,1) 100%);
+    background: -o-linear-gradient(top, rgba(225,243,247,0.38) 0%, rgba(225,243,247,1) 15%, rgba(225,243,247,1) 33%, rgba(221,230,168,1) 100%);
+    background: -ms-linear-gradient(top, rgba(225,243,247,0.38) 0%, rgba(225,243,247,1) 15%, rgba(225,243,247,1) 33%, rgba(221,230,168,1) 100%);
+    background: linear-gradient(to bottom, rgba(225,243,247,0.38) 0%, rgba(225,243,247,1) 15%, rgba(225,243,247,1) 33%, rgba(221,230,168,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1f3f7', endColorstr='#dde6a8', GradientType=0 );
+    border-bottom: .2rem solid;
+    border-top: .2rem solid;
+    padding: 1rem;
 }
 
-table th{
-    border: .2rem solid lightseagreen;
-    padding: .1rem 1rem;
+.datos table {
+    border-collapse: collapse;
+    background: rgba(255, 255, 255,.3);
 }
-table td{
-    border: .2rem dotted lightseagreen;
-    padding: .1rem 1rem;
+
+.datos th{
+    border: .2rem solid white;
+    padding: .1rem 2rem;
+}
+.datos td{
+    border: .1rem dotted white;
+    padding: .1rem 2rem;
+}
+
+figure:not(.portada) {
+    border: 3px solid rgb(140, 191, 233);
+}
+
+figure.portada {
+    max-height: 400px;
+}
+
+figure.portada img {
+    width:100%;
+}
+
+figure.panel img {
+    width: 20%;
+    vertical-align: top;
+    
+}
+
+figure.panel img:not(:first-of-type){
+    margin-left: -5.3px;
 }
 
 footer {
