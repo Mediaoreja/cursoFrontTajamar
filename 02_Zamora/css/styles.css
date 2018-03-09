@@ -28,7 +28,7 @@ body, figure {
     margin: 0 auto;
     max-width: 1080px;
     min-width: 680px;
-    padding: 3rem 2rem;
+    padding: 0 1rem;
 }
 
 header h1 {
@@ -105,6 +105,7 @@ aside {
 .datos table {
     border-collapse: collapse;
     background: rgba(255, 255, 255,.3);
+    width: 100%;
 }
 
 .datos th{
@@ -118,6 +119,7 @@ aside {
 
 figure:not(.portada) {
     border: 3px solid rgb(140, 191, 233);
+    margin-bottom: 1rem;
 }
 
 figure.portada {
@@ -130,8 +132,15 @@ figure.portada img {
 
 figure.panel img {
     width: 20%;
-    vertical-align: top;
-    
+    vertical-align: top; 
+}
+
+figure.video {
+    width: 100%;
+}
+
+figure.video video {
+    width:100%;
 }
 
 figure.panel img:not(:first-of-type){
