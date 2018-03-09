@@ -73,6 +73,16 @@ ul {
     list-style-type: circle;
 }
 
+article {
+    width: 60%;
+    float: left;
+}
+
+aside {
+    width: 35%;
+    margin-left:5%;
+    float: left;
+}
 
 
 .datos {
@@ -99,11 +109,11 @@ ul {
 
 .datos th{
     border: .2rem solid white;
-    padding: .1rem 2rem;
+    padding: 0 .2rem;
 }
 .datos td{
     border: .1rem dotted white;
-    padding: .1rem 2rem;
+    padding: 0 .2rem;
 }
 
 figure:not(.portada) {
@@ -129,5 +139,6 @@ figure.panel img:not(:first-of-type){
 }
 
 footer {
+    clear: both;
     color: navy;
 }
