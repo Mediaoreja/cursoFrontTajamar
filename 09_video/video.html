@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video embebido</title>
+
+    <style>
+       
+        /* para hacer responsive, el contenedor del video y audio con width en porcentaje, y luego los elementos video y audio al 100%
+        esto lo mismo para las imágenes */
+
+        video, audio {
+            border:5px solid;
+            width: 100%;
+        }
+
+        figure {
+           width: 70%;
+           margin: 0 auto;
+           padding: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Video nativo</h1>
+    </header>
+    <main>
+        <!-- el elemento figure vale tanto para video como imagenes o audio, elementos multimedia -->
+        <figure>
+            <!-- para incorporar un video no necesita más que la etiqueta video, nativa de html5 -->
+            <video src="./video/Ed Sheeran -  Perfect duet with Beyoncé from 'Heinz'.mp4" controls></video>
+        </figure>
+        <figure>
+            <!-- se puede usar la etiqueta audio con un video para que reproduzca solo el audio -->
+            <audio src="./video/Ed Sheeran -  Perfect duet with Beyoncé from 'Heinz'.mp4" controls autoplay></audio>
+        </figure>
+                
+                
+            
+    </main>
+    
+</body>
+</html>
