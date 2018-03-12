@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularios</title>
+    <style>
+        fieldset {
+            margin-bottom: 1rem;
+        }
+
+        .control-group {
+            padding: .4rem;
+        }
+
+        .control-group label {
+            width: 20%;
+            min-width: 2rem;
+            display: inline-block;
+            /* porque es un elemento en línea */
+        }
+
+        .control-group input {
+            width: 40%;
+            min-width: 10rem;
+        }
+
+        input:focus {
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplos de formularios</h1>
+    </header>
+    <main>
+        <form action="" method="GET">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <div class="control-group">
+                    <!-- esta clase es típica de bootstrap -->
+                    <label for="nombre">Escribe tu nombre</label>
+                    <!-- for corresponde a la id del campo del input -->
+                    <input type="text" name="nombre_user" id="nombre" maxlength="10" autofocus required>
+                    <!-- el atrib name es el dato que se envía la id es solo para el label; en la practica es conveniente poner el mismo en ambos atributos ya que el name debe ser único y si dos inputs tienen el mismo name solo se guardara en la base de datos el ultimo de ellos. el atributo maxlenghth viene determinado por la cantidad de caracteres reservados en la BBDD para el campo. La propiedad autofocus es para que comience en dicho imput al cargar el formulario-->
+                </div>
+                <div class="control-group">
+                    <label for="apellido">Apellidos</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Escribe tus dos apellidos" required>
+                    <!-- se puede usar un placeholder en lugar de un label ya que los navegadores actuales que soporten html5 entienden el placeholder como etiqueta del input -->
+                </div>
+                <div class="control-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="control-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" id="password" required minlength="8" placeholder="8 caracteres min.">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Otros datos</legend>
+                <textarea name="datos" id="datos" cols="30" rows="10" placeholder="Escriba otros datos (max. 150 caracteres)"></textarea>
+                <!-- si de da un salto de linea en el codigo aparacerá un espacio en blanco al inicio del text area cuando se hace focus y se comienza a escribir-->
+            </fieldset>
+            <fieldset>
+                <legend>Datos académicos</legend>
+                <!-- <div class="control-group">
+                    <label for="curso">Escribe tu curso</label>
+                    <input type="text" name="curso" id="curso" value="Desarrollo web">
+                    value es para que el input tenga por defecto asignado ya un texto que puede ser modificado por el ususario, diferente al placeholder 
+                </div>-->
+
+                <legend>Qué turno quieres</legend>
+                <div class="radio-group">
+                    <input type="radio" name="turno" id="mannana" value="mannana">
+                    <label for="mannana">Mañana</label>
+                    <input type="radio" name="turno" id="tarde" value="tarde">
+                    <label for="tarde">tarde</label>
+                    <input type="radio" name="turno" id="noche" value="noche">
+                    <label for="noche">Noche</label>
+                </div>
+                <div class="control-group">
+                    <label for="curso">Selecciona un curso</label>
+                    <select name="curso" id="curso">
+                        <option value="0">--Selecciona--</option>
+                        <option value="desarrollo">Desarrollo Front</option>
+                        <!-- si no se pone value toma su value del texto entre etiquetas option -->
+                        <option value="disenno">Diseño web</option>
+                        <!-- el atrib value es obligatorio cuando estan lo sdatos codificados, en este caso los cursos -->
+                        <option value="node">Servidores</option>
+                        <option value="sql">Bases de Datos</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset disabled="disabled">
+                <div class="check-group">
+                    <input type="checkbox" name="isOk" id="isOk">
+                    <label for="isOk">He leído y estoy de acuerdo con la
+                        <a href="">Política de Privacidad</a>
+                    </label>
+                </div>
+                <div class="check-group">
+                    <input type="checkbox" name="isOk2" id="isOk2">
+                    <label for="isOk2">No quiero recibir publicidad</label>
+                </div>
+            </fieldset>
+
+            <div class="control-group">
+                <!-- ambas opciones son válidas. Por productividad en css es mejor usar button para poder dar estilo a los inputs sin que se apliquen a los input de tipo submit -->
+                <!-- <input type="submit" value="enviar"> -->
+                <button type="submit">Enviar</button>
+
+                <!-- <input type="reset" value="Borrar"> -->
+                <button type="reset">Borrar</button>
+
+                <!-- <input type="button" value="Saludar"> -->
+                <button type="button">Saludar</button>
+                <!-- los button por defecto es de tipo submit si escribimos mal el type lo toma como submit-->
+
+                <!--  <button><img src="./simbolo_mail.svg" alt=""></button> -->
+
+                <input type="hidden" name="state" value="0">
+            </div>
+
+
+
+
+        </form>
+    </main>
+    <footer>
+        <address>Manu Díez</address>
+    </footer>
+
+</body>
+
+</html>
