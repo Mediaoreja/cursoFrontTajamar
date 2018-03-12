@@ -1,0 +1,91 @@
+*,
+*::after, *::before,
+*:after, *:before {
+    box-sizing: border-box;
+}
+
+/* hasta aquí la parte de reseteo */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+main {
+    min-height: 80vh;
+}
+nav {
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style-type: none; /* elimina las viñetas de la lista */
+    margin:0; /* resetea el valor por defecto */
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none; /* quitar estilo a los hiperenlaces */
+    color: unset; /* con el valor unset conservamos el color heredado de su padre */
+}
+
+/* Menu 1 basado en display inline-block */
+
+nav.menu1 ul {
+    /* text-align: right; */
+}
+
+nav.menu1 li {
+    display:inline-block;
+    border-right: 3px solid black;
+    background-color: lightblue;
+    margin-left: -4px; /* elimina el espacio por defecto entre elementos inline-block */
+    }
+
+nav.menu1 li:first-of-type {
+    border-left: 3px solid black; /* para añadir al primer elemento  */
+    
+}
+
+nav.menu1 a {
+    padding: .5rem 3rem; /* aplicando padding a los enlaces en vez de a los elementos li ampliamos la zona de ataque de cada opción del menú */
+    display:block; /* para que sean bloques a los que les afecte el paddign arriba y abajo */
+    white-space: nowrap; /* para que no haga un salto de linea automático en los espacios entre palabras */
+}
+    nav.menu1 a:hover {
+        background-color: rgb(13, 57, 124);
+        color:white;
+    }
+
+
+/* Menu 2 basado en float */
+
+nav.menu2 {
+    background-color: salmon;
+}
+
+nav.menu2 ul {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden; /*overflow: hidden;  descolapsa el contenedor despues de flotar los elementos li */
+}
+
+nav.menu2 li {
+    width:20%;
+    float: left;
+}
+
+nav.menu2 a {
+    padding: 1rem 1rem;
+    display:block;
+    text-align: center;
+    white-space: nowrap;
+}
+
+nav.menu2 a:hover {
+    background-color: maroon;
+    color:lightcoral;
+}
