@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Oswald|Roboto');
+
+/*  -------- fuentes ---------------
+
+Titulares
+
+    font-family: 'Anton', sans-serif;
+
+Párrafos
+
+    font-family: 'Oswald', sans-serif; 
+
+Otros
+
+    font-family: 'Roboto', sans-serif;
+
+*/
+
+*,
+*::before, *::after,
+*:before, *:after {
+    box-sizing: border-box;
+}
+
+picture {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-image: url("./img/fondo_papiro.jpg");
+    background-repeat: inherit;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Anton', sans-serif;
+    color:rgb(105, 75, 9);
+    background-color: linen;
+    padding: .5rem;
+}
+
+h3 {
+    display: inline-block;
+}
+
+header {
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    
+    font-size: 3rem;
+    padding: 1rem;
+    
+}
+
+.cabecera {
+    background-image: url("./img/egipto_ph01.jpg");
+    background-repeat: no-repeat;
+/*     background-size: contain; */
+    height: 300px;
+    overflow-y: auto;
+}
+
+aside.datos {
+    float: right;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    background-color: rgba(105, 75, 9,.8);
+   
+}
+
+aside.datos table {
+    border-collapse: collapse;
+    padding: 1rem;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size: .9rem;
+    margin: 1rem;
+
+
+}
+aside.datos td, aside.datos th{
+    border:2px solid rgb(197, 160, 125);
+    padding: .5rem 1rem;
+}
+
+main {
+    width:90%;
+    margin:0 auto;
+}
+
+article {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+article::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+article section {
+    width: 50%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    float: left;
+} 
+
+picture {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    width: 50%;
+    overflow: hidden;
+    display: block;
+    float: left;
+    background-color: linen;
+    border:5px solid linen;
+}
+picture img {
+    width: 100%;
+}
+
+figcaption {
+    padding: .5rem;
+    font-size: .8rem;
+}
+
+footer {
+    width: 100%;
+    background-color: rgb(105, 75, 9);
+    padding: 1rem;
+}
+
+footer address {
+    width: 25%;
+    color:white;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
