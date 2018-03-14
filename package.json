@@ -1,0 +1,31 @@
+{
+  "name": "cursofronttajamar",
+  "version": "1.0.0",
+  "description": "Ejercicios del curso front tajamar 2018",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mediaoreja/cursoFrontTajamar.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "learning"
+  ],
+  "author": "manu diez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mediaoreja/cursoFrontTajamar/issues"
+  },
+  "homepage": "https://github.com/Mediaoreja/cursoFrontTajamar#readme",
+  "dependencies": {
+    "http-serve": "^1.0.1"
+  }
+}
