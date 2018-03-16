@@ -52,6 +52,9 @@ console.log(user2)
 
 // Array
 
+let m = [] // con solo escribir x = [] estamos diciendo que la variable es un objeto array
+let n = {}  // con solo indicar llaver estamos marcando a la var con el tipo objeto
+
 let aDatos = [12, 23, 45, 45, 87] 
 let aDatosChungo = [12, 'pepe', true, null, undefined] // solo como ejemplo, esto no es normal tener un array de elementos combinados pero se puede. tambien se puede añadir un objeto en JSON
 console.log(aDatos)

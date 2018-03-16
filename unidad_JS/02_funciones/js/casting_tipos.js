@@ -56,3 +56,9 @@ function main() {
 }
 
 main()
+
+// resumen: tres maneras de forzar el casting
+    // poniendo + delante de la variable ej: +var1 + +var2
+    // con la funcion parseInt(var1) o parseFloat(var1)
+    // con la funcion oficial de casting Number(var1)
+    

@@ -72,3 +72,15 @@ console.log(x.length === y.length) // true porque ambas variables tienen el mism
 // expresión ? true : false
 let edad = 12
 console.log(edad > 30 ? 'Buenos días' : 'Hola chaval') // si es true escribe 'buenos dias'; si es false 'hola chaval' es como un if else sencillo
+
+let a = 12
+let b = 2
+let c = 4
+
+if( a < b && a < c ) {
+    console.log('Comprobado 1')
+} // devuelve false porque la primera condición ya no se cumple, y por tanto ya no sigue comprobando
+
+if( a > b || a < z ) {
+    console.log('Comprobado 2')
+} // devuelve true y no se molesta en comprobar si la segunda se cumple y menos aun da un error al no estar definida la var z

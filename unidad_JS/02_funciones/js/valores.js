@@ -1,4 +1,4 @@
-// Elementales -> valor -> inmutables
+// Elementales -> equivalen a un valor -> inmutables
 // number, string, boolean
 
 let x = 12
@@ -11,10 +11,10 @@ console.log(x) // 14, esto es porque los datos se manipulan por valor, el valor 
 //cada vez que damos nuevo valor a los elementales (inmutables) se borra el dato anterior para dar cabida al nuevo, pero no mudan al nuevo valor
 
 
-//objetos o datos referenciados -> referencia
+//objetos o datos referenciados -> referencia a datos mutables
 
 let o1 = {valor : 12}
-let o2 = o1 // asignacion de referencia, ambos objetos son referencia del mismo contenido de datos, si varia el valor de o1, varia riempre el de o2, salvo que se referencie o2 a un clon de o1
+let o2 = o1 // asignacion de referencia, ambos objetos son referencia del mismo contenido de datos, si varia el valor de o1, varia siempre el de o2, salvo que se referencie o2 a un clon de o1, que veremos más adelante
 o1.valor = 24
 
 console.log(o1) //valor : 24
