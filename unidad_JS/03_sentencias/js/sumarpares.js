@@ -1,19 +1,25 @@
-function comprobarPar(n) {
-    return isNaN(n/2) ? -1 : n%2 // devuelve 0, 1 y -1
-}
-
 let aDatos = [23, 54, 65, 34, 78, 67]
+let aDatos2 = [1, 2, 3, 4, 5, 6]
 
-function sumarPares() {
-
-}
-for (let i = 0; i < aDatos.length; i++) {
-    
-    comprobarPar(aDatos[i])
-    if( aDatos[i] = 0 ) {
-        
-        let suma =+ +aDatos[i] }
-    console.log(comprobarPar(aDatos[i]))
-
+function sumarPares(x) {
+    let suma = 0
+    for (let i = 0; i < x.length; i++) {
+        if ( isNaN(x[i]/2) ? -1 : x[i]%2 == 0 ) { 
+            suma += x[i]
+        }      
+    }
+        console.log(suma)  
 }
 
+function sumarImpares(x) {
+    let suma = 0
+    for (let i = 0; i < x.length; i++) {        
+        if ( isNaN(x[i]/2) ? -1 : x[i]%2 == 1 ) { 
+            suma += x[i]
+        }           
+    }
+    console.log(suma)  
+}
+
+sumarPares(aDatos)
+sumarImpares(aDatos)
