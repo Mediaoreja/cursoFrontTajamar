@@ -27,16 +27,22 @@ do {
 
 // en fibonacci la serie va 0+1, 1+1, 2+1, 3+2 ... es decir el resultado + el anterior
 
+function serieFibonacci(n) {
+    let a = 0
+    let b = 1
+   // let i = 0
+   let c = 0
+
+    do {
+        
+        c = a + b
+        console.log(c)
+        a = b
+        b = c
+       // i++
+    } while (c <= n);
+}
 
 
-let resultado = 0
-inc = 1
-i = 0
-do {
-    console.log(resultado)
-    resultado += inc
-    inc = resultado
-    i++
-} while (i <= 15);
-
+serieFibonacci(100)
 
