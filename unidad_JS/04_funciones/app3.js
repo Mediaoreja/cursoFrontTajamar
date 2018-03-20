@@ -26,6 +26,10 @@ mostrarCalculo(n, function() { // uso de la función anónima
     return n * 2
 })
 
+function mostrarResultado1 (){
+    console.log(calcularCubo(n))
+}
+
 setTimeout(function() {
     console.log(calcularCubo(n))
 }, 2000) // retarda la ejecución de la función en milisegundos
@@ -37,3 +41,15 @@ for (let i = 0; i < 10; i++) {
     console.log(i);
     
 }
+
+let y = {nombre: 'Pepe'}
+console.log(typeof mostrarResultado1) // devuelve el tipo 'function'
+
+let nuevaFuncion = mostrarResultado1 // si hacemos un typeof no sdevuelve 'function'
+
+nuevaFuncion() // invocamos la función asignada a la variable 'nuevaFuncion'
+
+// let nuevaFuncion = mostrarResultado1() >> con parentesis estamos asignando a la variable el resultado de la funcion no estamos asignando una funciona  la variable
+
+
+// ver archivo mas completo en github del profe

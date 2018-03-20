@@ -1,7 +1,10 @@
-// Función: un bloque de código comprendido entre llaves que se ejecuta cuando se la invoca
+// Función: un objeto que puede contener un bloque de código comprendido entre llaves que se ejecuta cuando se la invoca
+// Maneras de crearlas: mediante 'declaración' o por 'asignación'
+// Por 'declaración' tiene 'hiting', por asignación NO
+// hiting: 'alzamiento' de funciones, que se ejecutan aunque estén declaradas despues de invocarlas
 
 // declaración de la función
-// tienen hiting de funciones, 'alzamiento' de funciones, que se ejecutan aunque estén declaradas despues de invocarlas
+// tienen hiting
 function mostrar(n) {
     console.log(`Me han pasado ${n}`)
 }
