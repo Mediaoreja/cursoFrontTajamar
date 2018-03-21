@@ -5,19 +5,24 @@ Todo lenguaje de programación tiene:
     - operadores: +, -, *, /, %, ||, &&, typeof
     - conjunto de funciones ya hechas: esto constituye el interfaz, agrupados en distintos APIs:
 
-        - APIs deL Core (internos de JS)
-            - funciones globales: ParsInt(), ParseFloat(), IsNaN()
-            - Métodos propios de los objetos
+        - APIs propios deL Core (internos de JS)
+            - funciones globales: parseInt(), parseFloat(), isNaN()
+            - Métodos propios de los objetos (cuelgan de un objeto determinado unido a este mediante un punto)
+                ej.:
+                - elemento.toUpperCase()
+                        ** cuando el elemento es de tipo string, se convierte momentáneamente en un objeto para poder aplicarle métodos propios de objetos, tras la manipulación se vuelve a convertir en elementat de tipo string.
+                - aDatos.sort()
 
+                ** (Hay otros APIs que no necesita JS porque está restrinjido al ámbito huésped)
 
-        - APIs del Host (del navegador y del servidor (Node.js)
+        - APIs propios del Host (proporcionados por del navegador y por el servidor (NodeJS)
             - Browser:
-                - Objeto Window (la ventana del navegadro) y sus propiedades -> el BOM
+                - Objeto Window (la ventana del navegadro) y sus propiedades -> el BOM (Browser Object Mode)
                     - window.alert()
                     - setTimeout()
-                - Objeto Documento -> DOM
-            - Nuevos APIs de HTML5
-                - <video>
+                - Objeto Documento -> DOM (Document Object Mode)
+                - Nuevos APIs introducidos en HTML5
+                    - <video>
             - Node
                 -objeto global de Node
                     - setTimeout()

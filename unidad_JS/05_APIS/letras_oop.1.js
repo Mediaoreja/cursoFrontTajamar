@@ -1,4 +1,5 @@
-// app de letras_oop más depurado
+// app del ejemplo de  letras_oop.js pero más depurado
+
 (function() {
     appMayusculas = {
         cadena : '',

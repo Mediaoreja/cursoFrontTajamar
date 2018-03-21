@@ -1,4 +1,4 @@
-// trasformar el archivo letras.js en un 'objeto' o app
+// ejercicio de letras.js escrito en lenguaje tipo OOP (programación orientada a objetos) 
 
 app = {
     cadena : '',
