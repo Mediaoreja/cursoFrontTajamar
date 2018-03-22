@@ -8,7 +8,7 @@ let libro1 = {
     editorial : 'Thienemann-Esslinger Verlag',
     fecha : new Date('1979'),
     generos : ['Fantasia'],
-    mostrarRef: function() {
+    mostrarRef: function() { // esta linea se puede escribir en ES6 mostrarReferencia() {...}
         let ref = this.autor +'. '
         ref += '"' + this.titulo + '" '
         ref += this.editorial + ', ' + this.fecha + '. '
