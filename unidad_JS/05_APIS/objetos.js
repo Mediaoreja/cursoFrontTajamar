@@ -9,7 +9,7 @@ let libro1 = {
     generos : ['Fantasia']
 }
 
-let mostrarReferencia = function(obj){
+let mostrarReferencia = function(obj){ 
     let ref = obj.autor + '. '
     ref += '"' + obj.titulo + '". '
     ref += obj.editorial + ', ' + obj.fecha + '. '
@@ -26,7 +26,7 @@ let libro2 = {
     editorial : 'Minotauro',
     fecha : 1954,
     generos : ['Fantasia'],
-    mostrarReferencia:  function(){
+    mostrarReferencia:  function(){  // esta linea se puede escribir en ES6 mostrarReferencia() {...}
                         let ref = this.autor + '. '
                         ref += '"' + this.titulo + '". '
                         ref += this.editorial + ', ' + this.fecha + '. '
