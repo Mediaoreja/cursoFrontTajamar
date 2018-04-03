@@ -1,3 +1,25 @@
+*, 
+*::after, *::before, 
+*:after, *:before {
+    box-sizing: border-box
+}
+
 main {
     min-height: 60vh;
+}
+
+main button{
+    background-color: lightseagreen;
+    padding: .5rem 1rem;
+}
+
+main div {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+main div.output {
+    border: 2px solid lightsteelblue;
+    width: 50%;
 }
