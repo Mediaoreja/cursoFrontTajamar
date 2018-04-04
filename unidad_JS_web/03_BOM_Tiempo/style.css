@@ -1,0 +1,23 @@
+*, 
+*::after, *::before, 
+*:after, *:before {
+    box-sizing: border-box
+}
+
+main {
+    min-height: 60vh;
+    
+}
+
+
+output.crono {
+    display: inline-block;
+    font-size: 3rem;
+    padding: 2rem;
+}
+
+button {
+    display: inline-block;
+    width: 6rem;
+    text-align: center;
+}
