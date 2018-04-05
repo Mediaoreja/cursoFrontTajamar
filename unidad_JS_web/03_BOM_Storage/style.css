@@ -1,0 +1,38 @@
+*, 
+*::after, *::before, 
+*:after, *:before {
+    box-sizing: border-box
+}
+
+body {
+    background-color: antiquewhite
+}
+
+main {
+    min-height: 60vh;
+}
+
+main button{
+    background-color: lightseagreen;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    border: 0px;
+}
+
+main div {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+main output {
+    border-radius: 1rem;
+    width: 50%;
+    display: inline-block;
+    
+    font-size: 2rem;
+    background-color: white;
+}
+
+main output p {
+    padding: .5rem 3rem;
+}
