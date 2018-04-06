@@ -1,0 +1,33 @@
+*, 
+*::after, 
+*::before,
+*:after, 
+*:before {
+    box-sizing: border-box
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+article {
+    float: left;
+}
+.oculto {
+    display: none
+}
+
+.visible {
+    display: block
+}
+
+.ver {
+    font-variant: small-caps;
+    background-color: rgb(174, 175, 223);
+    padding: 0rem .2rem .2rem;
+}
+
+article {
+    width: 45%;
+    margin-right: 5%;
+}
