@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coordenadas del Ratón</title>
+    <style>
+        body {
+            width: 2000px;
+            height: 2000px;
+            background-color: blueviolet
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.querySelector('body').addEventListener('mousemove', mousePosition) // cada vex que se mueva el ratón arranque la función mousePosition
+
+        function mousePosition(ev) {
+            console.log(ev.pageX, ev.pageY, '/', ev.clientX, ev.clientY, '/', ev.screenX, ev.screenY) // muestra las coordenadas como referencia la página, del navegador y de la pantalla
+        }
+    </script>
+</body>
+</html>

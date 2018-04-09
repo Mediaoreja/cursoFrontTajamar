@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos de teclado</title>
+</head>
+<body>
+    <header>
+        <h1>Eventos de teclado</h1>
+    </header>
+    <main>
+        <input type="text" name="input" id="input">
+        <p id="output"></p>
+        <input type="text" name="input2" id="input2">
+        <p id="output2"></p> 
+    </main>
+
+    <script>
+
+        let p = document.querySelector('#output')
+        let p2 = document.querySelector('#output2')
+
+        let eInput = document.querySelector('#input')
+        // eInput.addEventListener('keydown', teclado)
+        eInput.addEventListener('keypress', teclado)
+
+        document.querySelector('#input2').addEventListener('input',inputTeclado) // Nuevo evento 'input' de html5
+
+        function teclado(ev){
+            let tecla = String.fromCharCode(ev.charCode)
+            
+            console.log(ev.type, '- keyCode ' + ev.keyCode)
+            console.log(ev.type, '- charCode ' + ev.charCode) // muestra la propiedad keyCode del objeto evento
+            console.log(ev.type, tecla) // invocamos un metodo estatico del objeto global String
+            p.innerHTML += tecla // recogemos en tiempo real el texto excrito en un campo y guardarlo en una variable por ejemplo para un buscador
+        }
+
+    function inputTeclado() {
+        let inp = document.querySelector('#input2')
+        console.log(inp.value) // se recoge el value del input2 conforme se introduce un nuevo carcater y lo va acumulando; si se borra, borra también ese último caracter
+        p2.innerHTML = inp.value
+    }
+
+    </script>
+    
+</body>
+</html>

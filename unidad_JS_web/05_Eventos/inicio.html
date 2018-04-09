@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="s">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos</title>
+</head>
+<body>
+    <header>
+        <h1>Eventos</h1>
+    </header>
+    <main>
+        <button type="button" id="btnPulsar">Pulsar</button>
+        <button type="button" id="btnPulsarM">Pulsar Moderno</button>
+        <a href="http://www.google.com" id="aPulsarM">Pulsar Moderno</a>
+    </main>
+    <script>
+
+        let btnPulsar = function(ev) {
+            let s = 'Hola soy un handler de eventos'
+            console.log(s)
+            console.dir(this)
+            console.dir(ev) // muestra el objeto evento
+            console.dir(ev.target)
+            console.dir(ev.type)
+        }
+
+        let btnPulsarM = function(ev) {
+            ev.preventDefault() // recogemos el objeto de Evento le podemos aplicar métodos y manejar sus atributos
+            let s = 'Hola soy un listener de eventos'
+            console.log(s)
+            console.dir(ev) // muestra el objeto evento
+            console.dir(this) // muestra el nodo que disparó el evento, pero es mejor usar .target ya que this en ocasiones puede referirse al window
+            console.dir(ev.target) // muestra el nodo que disparó el evento
+            console.dir(ev.type) // muestra el evento que se disparó
+        }
+
+        // mediante handler de eventos - en DOM level 0
+        document.querySelector('#btnPulsar').onclick = btnPulsar
+
+        // mediante listener de eventos - en el Standar o DOM level 2 (manera más actual de trabajar)
+        document.querySelector('#btnPulsarM').addEventListener('click', btnPulsarM)
+        document.querySelector('#aPulsarM').addEventListener('click', btnPulsarM)
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="s">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos</title>
+</head>
+
+<body>
+    <header>
+        <h1>Eventos</h1>
+    </header>
+    <main>
+        <button type="button" id="btnPulsar1">Pulsar 1</button>
+        <button type="button" id="btnPulsar2">Pulsar 1</button>
+       
+    </main>
+    <script>
+
+        class App {
+            constructor() {
+
+                this.aMensaje = ['Hola soy un handler de eventos','Hola soy un listener de eventos']
+
+                // sin bind(this)
+                document.querySelector('#btnPulsar1').onclick = this.btnPulsar
+
+                //con bind(this)
+                document.querySelector('#btnPulsar2').addEventListener('click', this.btnPulsarM.bind(this))
+        
+
+            }
+
+            btnPulsar(ev) {
+                
+                console.dir(this) // aqui this es el nodo que disparó el evento
+                console.dir(ev.target)
+                console.dir(ev.type)
+            }
+
+            btnPulsarM(ev) {
+                console.log(this.aMensaje[1]) // no podríamos ejecutarlo porque aquí this es el botón y no tiene la propiedad aMensajes en su interior, ya que esta está en el objeto app si no pudieramos en el manejador de eventos this.nombreFuncion.bind(this)
+                console.dir(this) // aqui this es el objeto app
+                console.dir(ev.target) // muestra el nodo que disparó el evento
+                console.dir(ev.type) // muestra el tipo de evento que se disparó
+            }
+        }
+
+      new App() // instanciamos un nuevo objeto de la classe App
+
+
+    </script>
+
+</body>
+
+</html>
