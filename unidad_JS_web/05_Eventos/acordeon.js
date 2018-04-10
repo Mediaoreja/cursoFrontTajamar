@@ -1,23 +1,22 @@
 (function(){
     function app() {
        
-        let pBtn = document.querySelectorAll('.pregunta')
-        let pRes = document.querySelectorAll('.respuesta')
+        let aPreguntas = document.querySelectorAll('.pregunta')
+        let aRespuestas = document.querySelectorAll('.respuesta')
 
-        for (let i = 0; i < pBtn.length; i++) {
-            pBtn[i].addEventListener('click', mostrar)
-            
-        }
-
-       
+        aPreguntas.forEach(item => {
+            item.addEventListener('click', mostrar, false)
+        });
+        
+        
 
         function mostrar(ev){
-           console.dir(ev)
-            pRes[0].classList.toggle('show')
-               
+           // falta plegar los otros elementos abiertos
+           ev.target.nextElementSibling.classList.toggle('show')
            
         }
 
+
     }
     window.addEventListener('load', app)
-})()
+})()       
