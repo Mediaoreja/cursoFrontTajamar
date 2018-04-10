@@ -1,0 +1,27 @@
+fieldset {
+    margin-bottom: 1rem;
+}
+
+.control-group {
+    padding: .4rem;
+}
+
+.control-group label {
+    width: 20%;
+    min-width: 2rem;
+    display: inline-block;
+    /* porque es un elemento en línea */
+}
+
+.control-group input {
+    width: 40%;
+    min-width: 10rem;
+}
+
+input:focus {
+    border-color: red;
+}
+
+.hidden {
+    display: none;
+}
