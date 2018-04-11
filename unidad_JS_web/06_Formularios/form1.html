@@ -22,11 +22,11 @@
                 <legend>Datos personales</legend>
                 <div class="control-group">
                     <label for="nombre">Escribe tu nombre</label>
-                    <input type="text" name="nombre_user" id="nombre" maxlength="10" autofocus>
+                    <input type="text" name="nombre_user" id="nombre" required minlength="2" maxlength="10" autofocus>
                 </div>
                 <div class="control-group">
                     <label for="apellido">Apellidos</label>
-                    <input type="text" name="apellido" id="apellido" placeholder="Escribe tus dos apellidos">
+                    <input type="text" name="apellido" id="apellido" placeholder="Escribe tus dos apellidos" required>
                 </div>
                 <div class="control-group">
                     <label for="email">E-mail</label>
@@ -35,6 +35,10 @@
                 <div class="control-group">
                     <label for="password">Contraseña</label>
                     <input type="password" name="password" id="password" minlength="8" placeholder="8 caracteres min.">
+                </div>
+                <div id="div_fecha" class="control-group">
+                    <label for="fecha">Fecha de nacimiento</label>
+                    <input type="date" id="fecha" name="fecha">
                 </div>
             </fieldset>
             <fieldset>

@@ -12,6 +12,7 @@ export class Formulario {
             apellido: '',
             email: '',
             password: '',
+            fechaNacimiento: '',
             datos: '',
             isOk: false, // no marcados por defecto
             isOk2: false, // no marcados por defecto
@@ -21,25 +22,25 @@ export class Formulario {
         }
 
         this.cursoFront = [
-            '--Selecciona--',
+            
             'Html5',
             'Css3',
             'ES6']
 
         this.cursoWeb = [
-            '--Selecciona--',
+            
             'Photoshop',
             'Indesign',
             'Illustrator'
         ]
         this.cursoServidores = [
-            '--Selecciona--',
+            
             'Node',
             'Php',
             '.Net'
         ]
         this.cursoBasesDatos = [
-            '--Selecciona--',
+            
             'Mongo',
             'SQL',
             'JAVA'
@@ -51,9 +52,8 @@ export class Formulario {
 
     accederDom() {
         // creamos las variables/propiedades de los elementos a lo que queremos acceder
+        this.domFormulario = document.querySelector('form')
         this.domBtnSaludar = document.querySelector('#btnSaludar')
-        this.domBtnEnviar = document.querySelector('#btnEnviar')
-        this.domBtnBorrar = document.querySelector('#btnBorrar')
         this.domInpNombre = document.querySelector('#nombre')
         this.domInpApellido = document.querySelector('#apellido')
         this.domInpEmail = document.querySelector('#email')
@@ -67,14 +67,15 @@ export class Formulario {
         this.domFieldAcademic = document.querySelector('#academic')
         this.domSelectorCursos = document.querySelector('#selectorCursos')
         this.domSelectorAsignaturas = document.querySelector('#selectorAsignaturas')
+        this.domInpFecha = document.querySelector('#fecha')
   
         
     }
 
     definirManejadores() {
         this.domBtnSaludar.addEventListener('click', this.saludar.bind(this)) // nos aseguramos con .bind(this) que el elemento this es el objeto Formulario
-        this.domBtnEnviar.addEventListener('click', this.enviar.bind(this))
-        this.domBtnBorrar.addEventListener('click', this.borrar.bind(this))
+        this.domFormulario.addEventListener('submit', this.enviar.bind(this)) // evento 'submit' propio del objeto formulario que se lanza una vez de ha validado
+        //this.domBtnBorrar.addEventListener('click', this.borrar.bind(this)) // para borrar ya existe un evento 'clear' propio del objeto formulario
         this.domChIsOk.addEventListener('change', this.completar.bind(this)) // se dispara el evento al chekear las condiciones
         this.domSelectCurso.addEventListener('change', this.mostrarAsignaturas.bind(this))
 
@@ -85,9 +86,10 @@ export class Formulario {
     }
 
     enviar(ev) {
-        ev.preventDefault() // le quitamos la funcion por defecto del boton submit de enviar el form
         this._recogerDatos() // con el guión declaramos la función de entorno privado
         this.presentarDatos()
+        ev.preventDefault() // anulamos el envío real en este ejemplo ya que no vamos a enviar a un servidor real
+        
 
     }
 
@@ -112,7 +114,8 @@ export class Formulario {
         this.datos.isOk = this.domChIsOk.checked // devuelve un booleano true o false
         this.datos.isOk2 = this.domChIsOk2.checked
         this.datos.curso = this.procesarSelect(this.domSelectCurso)
-        this.datos.asignaturas = this.procesarSelect(this.domSelectAsignaturas)
+        this.datos.fechaNacimiento = new Date(this.domInpFecha.value)
+       // this.datos.asignaturas = this.procesarSelect(this.domSelectAsignaturas)
 
     }
 
@@ -139,6 +142,7 @@ export class Formulario {
     }
 
     mostrarAsignaturas(ev) {
+        ev.target.firstElementChild.classList.add('hidden')
         let curso = ev.target.selectedIndex
         if (curso == 1) { this.selectAsignaturas(this.cursoFront) }
         if (curso == 2) { this.selectAsignaturas(this.cursoWeb) }
@@ -164,6 +168,7 @@ export class Formulario {
         <ul>
             <li>Nombre: ${this.datos.nombre}</li>
             <li>Apellido: ${this.datos.apellido}</li>
+            <li>Fecha de Nacimiento: ${this.datos.fechaNacimiento}</li>
             <li>email: ${this.datos.email}</li>
             <li>Contraseña: ${this.datos.password}</li>
             <li>Otros datos: ${this.datos.datos}</li>
@@ -175,6 +180,7 @@ export class Formulario {
         </ul>`
 
         this.domDivResultados.innerHTML = resultadoHTML
+        console.dir(this.datos)
     }
 
 

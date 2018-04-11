@@ -1,3 +1,8 @@
+main {
+    width: 60%;
+    margin: 0 auto;
+}
+
 fieldset {
     margin-bottom: 1rem;
 }
@@ -7,7 +12,7 @@ fieldset {
 }
 
 .control-group label {
-    width: 15%;
+    width: 40%;
     min-width: 2rem;
     display: inline-block;
     /* porque es un elemento en línea */
