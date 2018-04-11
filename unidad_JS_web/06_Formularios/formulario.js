@@ -112,7 +112,7 @@ export class Formulario {
         this.datos.isOk = this.domChIsOk.checked // devuelve un booleano true o false
         this.datos.isOk2 = this.domChIsOk2.checked
         this.datos.curso = this.procesarSelect(this.domSelectCurso)
-        this.datos.asignaturas = this.procesarSelect(this.selectAsignaturas())
+        this.datos.asignaturas = this.procesarSelect(this.domSelectAsignaturas)
 
     }
 
@@ -150,13 +150,11 @@ export class Formulario {
         this.domSelectorAsignaturas.innerHTML =
             `<label for="asignaturas">Selecciona asignaturas</label>
             <select name="asignaturas" id="asignaturas" multiple></select>`
-        let domSelectAsignaturas = document.querySelector('#asignaturas')
+        this.domSelectAsignaturas = document.querySelector('#asignaturas')
         for (let i = 0; i < curso.length; i++) {
-            domSelectAsignaturas.innerHTML += 
+            this.domSelectAsignaturas.innerHTML += 
             `<option value="${i}">${curso[i]}</option>`
         }
-        console.log(domSelectAsignaturas)
-        return domSelectAsignaturas
         
     }
 
