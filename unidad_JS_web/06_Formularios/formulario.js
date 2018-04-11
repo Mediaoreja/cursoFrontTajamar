@@ -16,14 +16,34 @@ export class Formulario {
             isOk: false, // no marcados por defecto
             isOk2: false, // no marcados por defecto
             turno: '',
-            curso: ''
+            curso: '',
+            asignaturas: ''
         }
 
         this.cursoFront = [
-            'Selecciona asignaturas',
+            '--Selecciona--',
             'Html5',
             'Css3',
             'ES6']
+
+        this.cursoWeb = [
+            '--Selecciona--',
+            'Photoshop',
+            'Indesign',
+            'Illustrator'
+        ]
+        this.cursoServidores = [
+            '--Selecciona--',
+            'Node',
+            'Php',
+            '.Net'
+        ]
+        this.cursoBasesDatos = [
+            '--Selecciona--',
+            'Mongo',
+            'SQL',
+            'JAVA'
+        ]
 
         this.accederDom()
         this.definirManejadores()
@@ -46,6 +66,9 @@ export class Formulario {
         this.domDivResultados = document.querySelector('#resultados')
         this.domFieldAcademic = document.querySelector('#academic')
         this.domSelectorCursos = document.querySelector('#selectorCursos')
+        this.domSelectorAsignaturas = document.querySelector('#selectorAsignaturas')
+  
+        
     }
 
     definirManejadores() {
@@ -65,9 +88,10 @@ export class Formulario {
         ev.preventDefault() // le quitamos la funcion por defecto del boton submit de enviar el form
         this._recogerDatos() // con el guión declaramos la función de entorno privado
         this.presentarDatos()
+
     }
 
-    borrar() {}
+    borrar() { }
 
     completar() {
         this.domFieldAcademic.disabled = !this.domFieldAcademic.disabled // convierte la propiuedad disabled en su contrario
@@ -88,78 +112,76 @@ export class Formulario {
         this.datos.isOk = this.domChIsOk.checked // devuelve un booleano true o false
         this.datos.isOk2 = this.domChIsOk2.checked
         this.datos.curso = this.procesarSelect(this.domSelectCurso)
-        
+        this.datos.asignaturas = this.procesarSelect(this.selectAsignaturas())
+
     }
 
     procesarRadio(nodo) {
         let value
         // nodo sera el parametro del radio box en cuestion
-        nodo.forEach( (item) => {
+        nodo.forEach((item) => {
             // con la propiedad .checked nos devuelve que item true o false
             if (item.checked) { value = item.value }
         })
-       return value
+        return value
     }
 
     procesarSelect(nodo) {
-        console.dir(nodo)
         let index = nodo.selectedIndex
-        if (index !== 0){
+        if (index !== 0) {
             return {
-            value : nodo.options[index].value, // recoje el value del selectedIndex del array options del item seleccionado
-            text : nodo.options[index].textContent
+                value: nodo.options[index].value, // recoje el value del selectedIndex del array options del item seleccionado
+                text: nodo.options[index].textContent
             }
         } else {
-           return {text: 'No ha seleccionado ningún curso'} 
+            return { text: 'No se ha seleccionado ningún item' }
         }
     }
 
-    mostrarAsignaturas(ev){
+    mostrarAsignaturas(ev) {
         let curso = ev.target.selectedIndex
-        if (curso == 1 ){
-            this.cursoFront.forEach(item => {
-                this.selectAsignaturas(this.cursoFront)
-            });
-           
-                
-            
-        }
+        if (curso == 1) { this.selectAsignaturas(this.cursoFront) }
+        if (curso == 2) { this.selectAsignaturas(this.cursoWeb) }
+        if (curso == 3) { this.selectAsignaturas(this.cursoServidores) }
+        if (curso == 4) { this.selectAsignaturas(this.cursoBasesDatos) }
     }
 
-selectAsignaturas(curso){
-    this.domSelectorCursos.innerHTML +=
-    `<label for="asignaturas">Selecciona asignaturas</label>
-    <select name="asignaturas" id="asignaturas">
-        <option value="0">${curso[0]}</option>
-        <option value="1">${curso[1]}</option>
-        <option value="2">${curso[2]}</option>
-        <option value="3">${curso[3]}</option>
-    </select>
-    `
-}
-    
+    selectAsignaturas(curso) {    
+        this.domSelectorAsignaturas.innerHTML =
+            `<label for="asignaturas">Selecciona asignaturas</label>
+            <select name="asignaturas" id="asignaturas" multiple></select>`
+        let domSelectAsignaturas = document.querySelector('#asignaturas')
+        for (let i = 0; i < curso.length; i++) {
+            domSelectAsignaturas.innerHTML += 
+            `<option value="${i}">${curso[i]}</option>`
+        }
+        console.log(domSelectAsignaturas)
+        return domSelectAsignaturas
+        
+    }
 
     presentarDatos() {
-        let resultadoHTML = 
-        `<h2>Resultados></h2>
+        let resultadoHTML =
+            `<h2>Resultados></h2>
         <ul>
-            <li>Nombre:${this.datos.nombre}</li>
-            <li>Apellido:${this.datos.apellido}</li>
-            <li>email:${this.datos.email}</li>
-            <li>Contraseña:${this.datos.password}</li>
-            <li>Otros datos:${this.datos.datos}</li>
-            <li>Turno:${this.datos.turno}</li>
-            <li>Curso:${this.datos.curso.text}</li>
-            <li>Aceptadas condiciones:${this.datos.isOk ? 'SI' : 'NO'}</li>
-            <li>Aceptado recibir informacion:${this.datos.isOk2? 'SI' : 'NO'}</li>
+            <li>Nombre: ${this.datos.nombre}</li>
+            <li>Apellido: ${this.datos.apellido}</li>
+            <li>email: ${this.datos.email}</li>
+            <li>Contraseña: ${this.datos.password}</li>
+            <li>Otros datos: ${this.datos.datos}</li>
+            <li>Turno: ${this.datos.turno}</li>
+            <li>Curso: ${this.datos.curso.text}</li>
+            <li>Asignaturas: ${this.datos.asignaturas.text}</li>
+            <li>Aceptadas condiciones: ${this.datos.isOk ? 'SI' : 'NO'}</li>
+            <li>Aceptado recibir informacion: ${this.datos.isOk2 ? 'SI' : 'NO'}</li>
         </ul>`
-        
+
         this.domDivResultados.innerHTML = resultadoHTML
     }
 
-   
 
-    
+
+
 
 }
 
