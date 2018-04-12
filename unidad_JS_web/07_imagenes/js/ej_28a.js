@@ -1,19 +1,21 @@
 (function () {
 
     function app () {
-
-        let domDivImg = document.querySelector('.imagen')
+      
         let domImg = document.querySelector('img')
 
-        domDivImg.addEventListener('mouseover', cambiarImg)
+        domImg.addEventListener('mouseover', cambiarImg)
+        domImg.addEventListener('mouseout', cambiarImg)
 
-        function cambiarImg (ev) {
+        function cambiarImg (oE) {
             
-            if (ev.type == 'mouseover') {
+            if (oE.type == 'mouseover') {
                 domImg.src = "./img/gato2.jpg"
+                
             }
             else {
                 domImg.src = "./img/gato1.jpg"
+                
             }
 
         }
