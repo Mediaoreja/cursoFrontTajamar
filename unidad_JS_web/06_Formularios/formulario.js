@@ -1,6 +1,7 @@
 // un fichero para cada clase individual
 // al iniciar una clase con export creamos un módulo
 // en el constructor solo deberían inicializarse variables o propiedades y manejadores d eventos. Pero bien estructurada es mejor hacer funciones y en el constructor
+import { CURSOS } from './cursos.js'
 
 export class Formulario {
 
@@ -143,23 +144,14 @@ export class Formulario {
 
     mostrarAsignaturas(ev) {
         ev.target.firstElementChild.classList.add('hidden')
-        let curso = ev.target.selectedIndex
-        if (curso == 1) { this.selectAsignaturas(this.cursoFront) }
-        if (curso == 2) { this.selectAsignaturas(this.cursoWeb) }
-        if (curso == 3) { this.selectAsignaturas(this.cursoServidores) }
-        if (curso == 4) { this.selectAsignaturas(this.cursoBasesDatos) }
-    }
-
-    selectAsignaturas(curso) {    
-        this.domSelectorAsignaturas.innerHTML =
-            `<label for="asignaturas">Selecciona asignaturas</label>
-            <select name="asignaturas" id="asignaturas" multiple></select>`
-        this.domSelectAsignaturas = document.querySelector('#asignaturas')
-        for (let i = 0; i < curso.length; i++) {
-            this.domSelectAsignaturas.innerHTML += 
-            `<option value="${i}">${curso[i]}</option>`
-        }
-        
+        let topics = CURSOS[ev.target.selectedIndex-1].asignaturas // del objeto CURSOS se toma el objeto en la posición del array que coincide con el indexSelect del target del evento que se ha disparado -1 ya que en el selector los cursos comienzan en la opcion a partir de 1 (0 es --Seleccionar--) y en el array CURSOS la posicion 0 es el primero de ellos
+        let HTMLResult = ''
+        topics.forEach( elem => HTMLResult +=
+            `<input type="checkbox" name="${elem}" id="${elem}">
+            <label for="${elem}">${elem}</label>`
+        )
+        this.domSelectorAsignaturas.innerHTML = '' 
+        this.domSelectorAsignaturas.innerHTML = HTMLResult
     }
 
     presentarDatos() {

@@ -24,13 +24,21 @@ fieldset {
 }
 
 input:focus {
-    border-color: red;
+    border-color: rgb(70, 101, 202);
 }
 
 .hidden {
     display: none;
 }
 
-select {
-    margin-right: 2rem;
+.select-group {
+    margin-top: 1rem;
+}
+
+div.check-group {
+    margin-top: .5rem
+}
+
+.check-group label, .radio-group label {
+    padding-right: 1rem
 }
