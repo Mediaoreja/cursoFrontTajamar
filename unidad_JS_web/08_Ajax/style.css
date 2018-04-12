@@ -1,0 +1,31 @@
+*, 
+*::after, *::before, 
+*:after, *:before {
+    box-sizing: border-box
+}
+
+body {
+    background-color: bisque
+}
+
+main {
+    min-height: 60vh;
+}
+
+main button{
+    background-color: rgb(151, 147, 76);
+    padding: .5rem 1rem;
+    color:white;
+    border:4px solid rgb(88, 84, 15);
+}
+
+main div {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+main div.output {
+    border: 2px solid lightsteelblue;
+    width: 50%;
+}
