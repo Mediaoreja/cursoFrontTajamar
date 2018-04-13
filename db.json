@@ -1,15 +1,44 @@
 {
   "posts": [
     {
-      "id": 1,
-      "autor": "Pepe",
-      "title": "Cosas que pasan"
+      "title": "Alicia en el País de las maravillas",
+      "author": "Lewis Carrol",
+      "id": 2
     },
     {
-      "id": 4
+      "title": "Alicia en el País de las maravillas",
+      "author": "Lewis Carrol",
+      "id": 3
     },
     {
-      "id": 5
+      "title": "Nuevo post",
+      "author": "Manuel",
+      "id": 7
+    },
+    {
+      "title": "Nuevo post",
+      "author": "Manuel",
+      "id": 8
+    },
+    {
+      "title": "Nuevo post",
+      "author": "Manuel",
+      "id": 9
+    },
+    {
+      "title": "Nuevo post",
+      "author": "Manuel",
+      "id": 10
+    },
+    {
+      "title": "Nuevo post",
+      "author": "Manuel",
+      "id": 11
+    },
+    {
+      "title": "Nuevo post",
+      "author": "Manuel",
+      "id": 12
     }
   ],
   "comments": [],

@@ -2,7 +2,7 @@ function app() {
 
     document.querySelector('#btnAjax').addEventListener('click', getDatos)
     document.querySelector('#btnAjaxItem').addEventListener('click', getDatos)
-    document.querySelector('#btnAjaxAdd').addEventListener('click', postDatos) // añadir
+    document.querySelector('#btnAjaxAdd').addEventListener('click', postDatos)
     document.querySelector('#btnAjaxBorrar').addEventListener('click', deleteDatos)
     document.querySelector('#btnAjaxModif').addEventListener('click', modificarDatos)
 
@@ -20,24 +20,36 @@ function app() {
                 return
             }
         }
-        conectar(metodo, url, null, stateChange)
+        conectar(metodo, url, null, consultarDatos)
+
+        function consultarDatos(respuesta) {
+            console.log('Datos Consultados')
+            console.dir(respuesta)
+        }
 
     }
 
     function postDatos() {
+        // estos datos deberian de recogerse de un formulario
         let data = {
-            title: "Neuromante",
-            author: "Federico"
+            title: "Nuevo post",
+            author: "Manuel",
         }
         let metodo = 'POST'
         let url = 'http://localhost:3000/posts'
-        conectar(metodo, url, JSON.stringify(data)) // convertimos en string nuestro objeto de datos
+        conectar(metodo, url, JSON.stringify(data), postearDatos) // convertimos en string nuestro objeto de datos
+    
+        function postearDatos(respuesta) {
+            console.log('Datos añadidos')
+            console.dir(respuesta)
+        }
     }
 
     function modificarDatos() {
+        // estos datos deberian de recogerse de un formulario
         let data = {
-            title: "Neuromante",
-            author: "William"
+            title: "Post Modificado",
+            author: "Manuel"
         }
         let metodo = 'PUT'
         let url = ''
@@ -48,7 +60,12 @@ function app() {
         else {
             return
         }
-        conectar(metodo, url, JSON.stringify(data), stateChange)
+        conectar(metodo, url, JSON.stringify(data), modificarDatos)
+
+        function modificarDatos(respuesta) {
+            console.log('Datos Modificados')
+            console.dir(respuesta)
+        }
     }
 
 
@@ -65,28 +82,40 @@ function app() {
             return
         }
 
-        conectar(metodo, url, null, stateChange)
+        conectar(metodo, url, null, borrarDatos)
+
+        function borrarDatos(respuesta) {
+            console.log('Datos Borrados')
+            console.dir(respuesta)
+        }
     }
 
-    function conectar(metodo, url, data, funcion) {
+    function conectar(metodo, url, data, callback) {
         ajax = new XMLHttpRequest()
-        ajax.onreadystatechange = funcion
+        ajax.onreadystatechange = stateChange
         ajax.open(metodo, url)
+        ajax.setRequestHeader('Content-Type', 'application/json')
+        ajax.setRequestHeader('Accept', 'application/json')
         ajax.send(data)
-    }
 
-    function stateChange() {
+        function stateChange() {
         console.log('Cambio de estado')
         console.log(ajax.readyState)
         if (ajax.readyState === 4) {
+            console.log("Comunicación OK")
             if (ajax.status === 200) {
                 let respuesta = JSON.parse(ajax.responseText)
-                console.dir(respuesta)
+                callback(respuesta) // ejecuta la funcion callback que viene como argumento de la funcion contectar()
             }
             else {
+                console.log(ajax.status)
+                console.log(ajax.statusText)
             }
         }
     }
+    }
+
+    
 }
 
 window.addEventListener('load', app, false)
