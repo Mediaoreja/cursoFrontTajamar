@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prueba práctica obligatoria</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./app.js"></script>
+</head>
+
+<body>
+    <main>
+        <form action="" method="GET">
+            <fieldset class="content">
+                <legend>Datos del alumno</legend>
+                <div class="seccion">
+                    <fieldset>
+                        <legend>Identificación</legend>
+                        <div class="grupo-control">
+                            <label for="">Cuenta de correo</label>
+                            <input id="email" name="email" type="email" required autofocus>
+                        </div>
+                        <div class="grupo-control">
+                            <label for="">Introduzca su clave de acceso</label>
+                            <input id="pass1" name="pass1" type="password" required>
+                        </div>
+                        <div class="grupo-control">
+                            <label for="pass2">Repita la clave de acceso</label>
+                            <input id="pass2" name="pass2" type="password" required><output id="mensajePass"></output>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Curso</legend>
+                        <div class="grupo-control">
+                            <input type="radio" name="curso" id="pWeb" value="Programador Web">
+                            <label for="pWeb">Programador Web</label>
+                        </div>
+                        <div class="grupo-control">
+                            <input type="radio" name="curso" id="pSistemas" value="Programador de Sistemas">
+                            <label for="pSistemas">Programador de Sistemas</label>
+                        </div>
+                        <div class="grupo-control">
+                            <input type="radio" name="curso" id="pObjetos" value="Programador de Objetos">
+                            <label for="pObjetos">Programador de Objetos</label>
+                        </div>
+
+                        <select class="hidden" id="selectorAsignaturas"></select>
+
+                    </fieldset>
+                    <fieldset>
+                        <button id="btnEnviar" type="submit">Enviar</button>
+                        <button type="reset">Restablecer valores</button>
+                    </fieldset>
+                </div>
+                <div class="seccion">
+
+                    <fieldset>
+                        <legend>Datos Personales</legend>
+                        <div class="grupo-control">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" id="nombre" required minlength="2" maxlength="10">
+                        </div>
+                        <div class="grupo-control">
+                            <label for="apellido">Primer apellido</label>
+                            <input type="text" name="apellido1" id="apellido1" required>
+                        </div>
+                        <div class="grupo-control">
+                            <label for="apellido2">Segundo apellido</label>
+                            <input type="text" name="apellido2" id="apellido2">
+                        </div>
+                        <fieldset class="subcampo">
+                            <legend >Fecha de Nacimiento</legend>
+                            <input type="date" id="fecha" name="fecha">
+                        </fieldset>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Aficiones</legend>
+                        <div class="grupo-check">
+                            <input type="checkbox" name="Música" id="isOk1">
+                            <label for="musica">Música</label>
+                            <input type="checkbox" name="Viajes" id="isOk2">
+                            <label for="Viajes">Viajes</label>
+                            <input type="checkbox" name="Pintura" id="isOk3">
+                            <label for="Pintura">Pintura</label>
+                            <input type="checkbox" name="Fotografía" id="isOk4">
+                            <label for="Fotografía">Fotografía</label>
+                        </div>
+                        <div class="grupo-check">
+                            <input type="checkbox" name="Cine" id="isOk5">
+                            <label for="Cine">Cine</label>
+                            <input type="checkbox" name="Lectura" id="isOk6">
+                            <label for="Lectura">Lectura</label>
+                            <input type="checkbox" name="Deporte" id="isOk7">
+                            <label for="Deporte">Deporte</label>
+                            <input type="checkbox" name="Baile" id="isOk8">
+                            <label for="Baile">Baile</label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <p id="outDate"></p>
+                    </fieldset>
+                </div>
+
+
+
+            </fieldset>
+        </form>
+        <div id="salidaDatos"></div>
+    </main>
+
+
+</body>
+
+</html>
