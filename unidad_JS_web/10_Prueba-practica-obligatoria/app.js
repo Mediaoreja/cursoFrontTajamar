@@ -59,7 +59,7 @@
 
         function asignarManejadores() {
             domCurso.forEach(element => {
-                element.addEventListener('click', mostrarAsignaturas)
+                element.addEventListener('change', mostrarAsignaturas)
             });
             domAficiones.forEach(item => {
                 item.addEventListener('click', addAficiones, false)
@@ -69,13 +69,6 @@
         function addAficiones (ev){
             datos.aficiones.push(ev.target.name)
             console.dir(ev.target.checked)
-    /*    for (let i = 0; i < datos.aficiones.length; i++) { 
-                if (ev.target.checked !== false) {
-                    datos.aficiones.push(ev.target.name);
-                }
-              else {  }  
-          }
-    */
             console.log(datos.aficiones)
         } 
 
@@ -154,7 +147,7 @@
                 'diciembre'
             ]
 
-            domOutDate.innerHTML = `Hoy es ${semana[diaSemana]}, día ${dia} de ${meses[mes]} de ${año}`
+            domOutDate.innerHTML = `Hoy es ${semana[diaSemana-1]}, día ${dia} de ${meses[mes]} de ${año}`
         }
 
         fechaActual()
