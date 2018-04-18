@@ -1,0 +1,29 @@
+*,
+*::after, *::before,
+*:after, *:before {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+main {
+    background-color: paleturquoise;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*     align-content: stretch; */
+    flex-wrap: wrap ;
+/*     height: 35rem; */
+}
+
+div {
+    font-size: 5rem;
+    padding: 1rem;
+/*     width: 10rem;
+    height: 10rem; */
+    background-color: salmon;
+/*     border: 3px solid seashell; */
+    margin: .21rem;
+}
+div:nth-of-type(3) {
+    font-size: 7rem;
+}

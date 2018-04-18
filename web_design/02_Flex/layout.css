@@ -1,0 +1,79 @@
+*,
+*::after, *::before,
+*:after, *:before {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.header, .footer {
+    min-height: 6rem;
+    background-color: palegoldenrod;
+    color: rgb(92, 81, 31);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+}
+
+article {
+    margin-bottom: 3rem;
+}
+
+.lado {
+    padding: 3rem;
+    border:1px solid;
+}
+
+.lado_izq {
+    width: 20%;
+    flex-grow: 3;
+/*     flex-basis: auto;
+    flex-shrink: 1; */
+     
+
+}
+
+.lado_dcha {
+    width: 20%;
+    flex-grow: 1;
+/*     flex-basis: auto;
+    flex-shrink: 1; */
+}
+
+.columnas_2{
+    -webkit-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+    -webkit-column-rule: 1px solid gray;
+            column-rule: 1px solid gray;
+   /*  column-fill: 6rem ; */
+   /*  column-span: auto ; */
+}
+
+.columnas_2 p:nth-of-type(1) {
+    margin-top: 0;
+}
+
+.films {
+    display: flex;
+}
+
+.columna {
+    padding: 1rem;
+    background-color: oldlace;
+}
+
+.img_container {
+    width: 50%;
+    padding-right: 1rem;
+    float: left;
+}
+
+img {
+    width: 100%
+}
+
