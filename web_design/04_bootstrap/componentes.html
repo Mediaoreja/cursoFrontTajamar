@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Componentes de Bootstrap</title>
+    <link rel="stylesheet" href="./../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./componentes.css">
+</head>
+
+<body>
+    <header class="jumbotron">
+        <h1 class="display-3">Jumbo heading</h1>
+        <p class="lead">Jumbo helper text</p>
+        <hr class="my-2">
+        <p>More info</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+        </p>
+    </header>
+    <nav class="navbar navbar-expand-sm|md|lg|-xl navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="#">Action 1</a>
+                        <a class="dropdown-item" href="#">Action 2</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Cursos
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="triggerId">
+                        <h6 class="dropdown-header">Lenguajes</h6>
+                        <a class="dropdown-item" href="#">HTML/CSS</a>
+                        <a class="dropdown-item disabled" href="#">JS</a>
+                        <div class="dropdown-divider">Divisor</div>
+                        <h6 class="dropdown-header">Frameworks</h6>
+                        <a class="dropdown-item" href="#">Bootstrap</a>
+                        <a class="dropdown-item" href="#">Material</a>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Título de card default</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. In neque natus sit sint delectus nam architecto perferendis saepe nostrum id! Delectus facere qui enim unde alias natus, exercitationem debitis iste?</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <script src="./../node_modules/jquery/dist/jquery.js"></script>
+    <!-- enlazamos al script de jquery primero -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- CDN de Popper, necesario para desplegables -->
+
+    <script src="./../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- enlazamos al script de bootstrap -->
+</body>
+
+</html>
