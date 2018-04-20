@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Gamja+Flower|PT+Sans+Narrow');
+
+/* Fuentes */
+
+/* 
+logotipo editorial y secciones:
+font-family: 'Gamja Flower', cursive;
+
+titulares:
+font-family: 'Anton', sans-serif;
+
+cuerpo:
+font-family: 'PT Sans Narrow', sans-serif; */
+
+/* First Mobile */
+
+*,
+*::after, *::before,
+*:after, *:before {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+}
+
+.header h1 {
+    font-size: 5rem;
+}
+
+
+h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h3, h4 {
+    margin-top: 2rem;
+    margin-bottom: .8rem;
+}
+
+
+
+P {
+    margin: 1rem 0 1rem;
+}
+
+a {
+    color: rgb(8, 80, 18);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    background-color: olivedrab;
+    color:white;
+    padding: 1rem;
+}
+
+.nav_icon {
+    max-width: 3rem;
+    max-height: 3rem;
+    flex: 1 1 auto;
+    padding: .5rem;
+    background-color: white;
+    border-radius: .5rem;
+    margin-right: 1rem;
+
+}
+
+.img_nav_icon {
+    width:100%
+}
+
+.header {
+    flex: 3 1 auto;
+}
+
+.header h1 {
+    font-family: 'Gamja Flower', cursive;
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: 'Anton', sans-serif;
+    color: rgb(8, 80, 18);
+}
+
+body {
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+div.imagen {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+nav.navegation_escritorio {
+    background-color: rgb(8, 80, 18);
+    display: none;
+}
+
+nav.navegation_escritorio li {
+    display: inline-block;
+    padding: .5rem 2rem;
+} 
+
+nav.navegation_escritorio a {
+    text-decoration: none;
+    color:white;
+}
+
+
+nav.navegation_mobile {
+    background-color: rgb(8, 80, 18);
+    display: flex;
+    justify-content: center;
+}
+
+nav.navegation_mobile li {
+    display: inline-block;
+    padding: .5rem;
+} 
+
+nav.navegation_mobile a {
+    text-decoration: none;
+    color:white;
+}
+
+nav.navegation_escritorio li:hover,
+nav.navegation_mobile li:hover {
+    background-color:green;
+}
+
+aside article {
+    background-color: rgb(235, 247, 208);
+    border-radius: 1rem;
+    padding: .5rem;
+    margin: 1rem 0;
+}
+
+aside ul {
+    margin-bottom: 1rem;
+}
+
+address {
+    padding: .5rem 1rem;
+}
+
+/* tables */
+
+@media screen and (min-width: 480px) {
+
+
+    .navegation_mobile, .nav_icon {
+        display: none;
+    }
+
+    nav.navegation_escritorio {
+         display: flex;
+         justify-content: center;
+    }
+
+    nav.navegation_mobile {
+        display: none;
+
+    }
+
+    section.principal {
+        display: flex;
+
+    }
+
+    section.principal article:nth-of-type(1) {
+        margin-right: 6%;
+    }
+
+    aside.noticias {
+        display:flex;
+    }
+
+}
+
+/* pantallas */
+
+@media screen and (min-width: 768px) {
+
+    .container {
+        max-width: 1024px;
+        margin:0 auto;
+
+    }
+
+    .main {
+        display: flex;
+    }
+
+    section.principal {
+        width: 10%;
+        flex: 2 1 auto;
+        
+    }
+
+    aside {
+        width: 10%;
+        flex: 1 1 auto;
+        margin-left: 3.5%;
+    }
+}
